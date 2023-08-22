@@ -4,8 +4,8 @@ class Ravenclaw extends Hogwarts {
     private int witty;//остроумие
     private int creativity;//творчество
 
-    public Ravenclaw(int witchcraft, int transgression, int smart, int wise, int witty, int creativity) {
-        super(witchcraft, transgression);
+    public Ravenclaw(String fullName, int witchcraft, int transgression, int smart, int wise, int witty, int creativity) {
+        super(fullName, witchcraft, transgression);
         this.smart = smart;
         this.wise = wise;
         this.witty = witty;
@@ -26,5 +26,12 @@ class Ravenclaw extends Hogwarts {
 
     public int getCreativity() {
         return creativity;
+    }
+
+    @Override
+    public void studentDescription() {
+        System.out.println("Имя - " + getFullName() + ", witchcraft " + getWitchcraft() +
+                ", transgression " + getTransgression() + ", smart " + getSmart() + ", wise " + getWise() +
+                ", witty " + getWitty() + ", creativity " + getCreativity());
     }
 }

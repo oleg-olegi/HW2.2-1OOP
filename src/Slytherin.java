@@ -5,9 +5,9 @@ class Slytherin extends Hogwarts {
     private int resourcefulness;//находчивость
     private int lustOfPower;//жажда власти
 
-    public Slytherin(int witchcraft, int transgression, int cunning,
+    public Slytherin(String fullName, int witchcraft, int transgression, int cunning,
                      int determination, int ambition, int resourcefulness, int lustOfPower) {
-        super(witchcraft, transgression);
+        super(fullName, witchcraft, transgression);
         this.cunning = cunning;
         this.determination = determination;
         this.ambition = ambition;
@@ -33,5 +33,13 @@ class Slytherin extends Hogwarts {
 
     public int getLustOfPower() {
         return lustOfPower;
+    }
+
+    @Override
+    public void studentDescription() {
+        System.out.println("Имя - " + getFullName() + ", witchcraft " + getWitchcraft() +
+                ", transgression " + getTransgression() + ", cunning " + getCunning() + ", determination " + getDetermination()
+                + ", ambition " + getAmbition() + ", resourcefulness " + getResourcefulness() +
+                ", lustOfPower " + getLustOfPower());
     }
 }
