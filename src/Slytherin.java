@@ -35,6 +35,20 @@ class Slytherin extends Hogwarts {
         return lustOfPower;
     }
 
+    public static void studentComparison(Slytherin student1, Slytherin student2) {
+        int sum1 = student1.getAmbition() + student1.getResourcefulness() + student1.getLustOfPower()
+                + student1.getDetermination() + student1.getCunning();
+        int sum2 = student2.getAmbition() + student2.getResourcefulness() + student2.getLustOfPower()
+                + student2.getDetermination() + student2.getCunning();
+        if (sum1 > sum2) {
+            System.out.println("Студент " + student1.getFullName() +
+                    " лучший Пуффендуец, чем " + student2.getFullName());
+        } else {
+            System.out.println("Студент " + student2.getFullName() +
+                    " лучший Пуффендуец, чем " + student1.getFullName());
+        }
+    }
+
     @Override
     public void studentDescription() {
         System.out.println("Имя - " + getFullName() + ", witchcraft " + getWitchcraft() +
