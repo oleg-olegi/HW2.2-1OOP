@@ -22,7 +22,7 @@ public class Hogwarts {
         return transgression;
     }
 
-    public void studentDescription() {
+    public void studentDescription() {//описание студента
         System.out.println("Имя - " + fullName + ", witchcraft " + getWitchcraft() +
                 ", transgression " + getTransgression());
     }
